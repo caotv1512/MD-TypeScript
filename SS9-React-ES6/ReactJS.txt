@@ -1,0 +1,7 @@
+- ReactJS là một thư viện của JS được phát triển dựa trên Facebook
+- ReactJS sử dụng cơ chế xây dựng SPA (single page application)
+- Dễ dàng xử dụng, học hỏi
+- Cộng đồng React lớn
+- Giúp người dùng có thể dễ dàng phát triển, xây dựng components UI và tái sử dụng.
+- ReactJS giao tiếp data giữa các components bằng prop, state. Mỗi lần cập nhận data thì 
+React sẽ re-render lại các components.
