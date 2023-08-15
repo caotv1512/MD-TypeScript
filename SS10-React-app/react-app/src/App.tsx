@@ -1,17 +1,22 @@
 // import React from "react";
-// import Header from "./components/Header";
+import Header from "./components/Header";
 // import Body from "./components/Body";
 // import Footer from "./components/Footer";
+import LifecycleComponent from "./components/LifeCycle";
+// import SS5 from "./components/SS5";
+import Greeting from './components/Greeting';
 import SS5 from "./components/SS5";
 
 function App() {
   return (
     <>
       <div className="App">
-        {/* <Header />
-        <Body/>
-        <Footer /> */}\
-        <SS5/>
+        <Header />
+        {/* <Body/>
+        <Footer /> */}
+        {/* <SS5 /> */}
+        {/* <LifecycleComponent  initialCount= {10}/> */}
+        {/* <Greeting name="Cao"/> */}
       </div>
     </>
   );
