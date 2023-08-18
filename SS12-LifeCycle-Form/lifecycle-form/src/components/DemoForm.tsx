@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 const DemoFrom: React.FC = () => {
   const data =['ThangLV', 'MinhNA']
   const [inputValue, setInputValue] = useState('');
+  const [count, setCount] = useState(1);
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
-    setInputValue(event.target.value);
+  const handleInputChange = async () => {
+    // console.log(event.target.value);
+    await setCount(count + 1);
+    await setCount(count + 1);
+    await setCount(count + 1);
   };
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -19,21 +22,11 @@ const DemoFrom: React.FC = () => {
   };
 
   return (
+   
     <div>
-      <h1>Simple Form Example</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="inputField">Input:</label>
-          <input
-            type="text"
-            id="inputField"
-            value={inputValue}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      <h2>Lifecycle Component</h2>
+      <p>Count: {count}</p>
+      <button onClick={handleInputChange}>Increment</button>
     </div>
   );
 };
