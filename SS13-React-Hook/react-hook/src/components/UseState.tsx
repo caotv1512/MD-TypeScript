@@ -1,8 +1,14 @@
 import { log } from "console";
 import React, { useState } from "react";
 import Child from "./Child";
+import { Product } from "../App";
 
-function UseState() {
+
+function UseState({data, id}:Product ) {
+  console.log(data);
+  console.log(id);
+
+  // const [newID, setID] = useState(id);
   /**
    * ================= React HOOK =================
    * 1. useState()
@@ -18,7 +24,7 @@ function UseState() {
   // interface IState {
   //     names: string[]
   // }
-  const [names, setNames] = useState(['']);
+  const [names, setNames] = useState([""]);
   const [value, setValue] = useState("");
 
   //   const [count, setCount] = useState(0);
@@ -27,14 +33,15 @@ function UseState() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
-  const handleSubmit = () => {
-    const newNames = [...names, value];
-    setNames(()=>{
-      return newNames
-    }); 
-    setValue("");
-    console.log(value);
-  };
+  // const handleSubmit = (e) => {
+  //   const newNames = [...names, value];
+  //   setID(e.target.key);
+  //   setNames(()=>{
+  //     return newNames
+  //   });
+  //   setValue("");
+  //   console.log(value);
+  // };
 
   return (
     <div style={{}}>
@@ -42,17 +49,15 @@ function UseState() {
       <p>Count: {count}</p>
       <button onClick={handleCount}>+</button> */}
       <input type="text" value={value} onChange={handleChange} />
-      <button type="button" onClick={handleSubmit}>
-        Submit
-      </button>
+      <button type="button">Submit</button>
       {/* <h3>YourName: {names}</h3> */}
-      <ul>
-       {names.map((name, index) => (
-         <li key={index}>{name}</li>
+      {/* <ul>
+       {names.map((item, index) => (
+        //  <li key={item.id}>{name}</li>
        ))}
-      </ul>
+      </ul> */}
       <>
-      <Child/>
+        <Child />
       </>
     </div>
   );
