@@ -7,20 +7,18 @@ import Header from "./components/Header";
 
 function App() {
   const [products, setProducts] = React.useState([]);
-  const [cartCount, setCartCont] = React.useState(0);
   useEffect(() => {
     axios.get("http://localhost:5000/products").then((response) => {
       setProducts(response.data);
     });
   }, []);
-  console.log(cartCount);
   
 
   return (
     <div className="App">
-      <Header cartCount={cartCount} />
+      <Header/>
       <Routes>
-        <Route path="/products" element={<Product setCartCount={setCartCont} cartCount={cartCount} products={products} />} />
+        <Route path="/products" element={<Product products={products} />} />
       </Routes>
       {/* <Product products={products} /> */}
     </div>
