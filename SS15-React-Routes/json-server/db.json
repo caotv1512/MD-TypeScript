@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "age": 22
-    },
-    {
       "id": 2,
       "name": "Jane Doe",
       "age": 24
@@ -27,16 +22,6 @@
     },
     {
       "id": 1001,
-      "name": "CaoTV",
-      "age": 18
-    },
-    {
-      "id": 95,
-      "name": "CaoTV",
-      "age": 18
-    },
-    {
-      "id": 50,
       "name": "CaoTV",
       "age": 18
     }
