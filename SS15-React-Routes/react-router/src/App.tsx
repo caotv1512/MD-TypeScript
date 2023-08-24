@@ -13,6 +13,7 @@ import ProductDetail from "./components/products/ProductDetail";
 import PhoneDetail from "./components/products/PhoneDetail";
 import Login from "./components/pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import UserManagement from "./components/UserManager";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route path="phone" element={<Phone />} />
             <Route path="phone/:phoneId" element={<PhoneDetail />} />
           </Route>
-          <Route path="/user" element={<User />} />
+          <Route path="/user" element={<UserManagement />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
         <Route path="/login" element={<Login />} />
