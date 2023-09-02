@@ -12,7 +12,6 @@ interface IProductProps {
 function Product(props: IProductProps) {
   // B2: Xử dụng useSelector để lấy ra giá trị của state
   const count = useSelector((state: any) => state.cartCount);
-  console.log(count);
 
   // B3: Xử dụng dispatch để update state
   const dispatch = useDispatch();
