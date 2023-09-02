@@ -10,9 +10,9 @@ const initialState : IInitialState = {
   carts: [],
 };
 
+
 // Khởi tạo store: chuyền vào 2 tham số là : state và action
 const store = createStore((state: IInitialState = initialState, action) => {
-  console.log(action.type);
   if (action.type === "ADD_TO_CART") {
     return {
       ...state,
